@@ -1,0 +1,250 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif; /* Fuente utilizada en el diseño */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* Asegura que el fondo ocupe toda la altura */
+    font-family: Arial, sans-serif;
+    background-image: url('../img/fondoindex.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 80px;
+    width: 100%;
+}
+
+/* Formulario y Tabla */
+.form-container, .table-container {
+    background-color: rgb(3, 5, 33,0.8); /* Fondo transparente acorde al diseño */
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* Estilos generales para los inputs */
+.form-container input[type="text"],
+.form-container input[type="email"] {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente para inputs */
+    color: #ffffff; /* Texto blanco */
+    border: none; /* Quitar borde por defecto */
+    border-bottom: 2px solid #5ac9c2; /* Línea en tono principal */
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover y focus para los inputs */
+.form-container input[type="text"]:hover,
+.form-container input[type="email"]:hover,
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo un poco más claro */
+    border-bottom: 2px solid #ffffff; /* Línea blanca en hover/focus */
+    outline: none;
+}
+
+/* Formulario */
+.form-container {
+    width: 40%;
+}
+
+/* Tabla */
+.table-container {
+    width: 55%;
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: whitesmoke;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+/* Inputs del formulario */
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(90, 201, 194, 0.5);
+}
+
+/* Botones con iconos para editar y eliminar */
+.button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 5px; /* Espacio entre botones */
+}
+
+.button-icon.edit {
+    background-color: transparent;
+    border-color: red;
+    border: 10px;
+    color: #fffa00;
+}
+
+.button-icon.edit:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.button-icon.delete {
+    background-color: transparent;
+    border-color: red;
+    border: 10px;
+    color: red;
+}
+
+.button-icon.delete:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Iconos dentro de los botones */
+.button-icon i {
+    font-size: 1.2rem;
+}
+
+/* Tabla */
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.content-table thead tr {
+    background-color: #5ac9c2; /* Tono azul principal */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.content-table th, .content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    background-color: rgba(11, 43, 92, 0.8);
+    color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: rgba(11, 43, 92, 0.6);
+}
+
+/* Botones de la tabla */
+.table-container button {
+    padding: 10px 12px;
+    margin-right: 5px;
+    background-color: #5ac9c2; /* Azul principal */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.table-container button:hover {
+    background-color: #08496f; /* Azul oscuro */
+}
+
+/* Animaciones para botones */
+button, .table-container button {
+    transition: all 0.3s ease-in-out;
+}
+.modal-content {
+    background-color: rgba(3, 5, 33, 0.9); /* Fondo oscuro semitransparente */
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    color: black;
+}
+.modal-body {
+    background-color: rgba(3, 5, 33, 1); /* Fondo oscuro semitransparente */
+
+}
+.modal-header {
+    border-bottom: 1px solid #5ac9c2;
+    background-color: rgba(3, 5, 33, 0.9); /* Fondo oscuro semitransparente */
+
+}
+
+.btn-close {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.btn-close:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-bottom: 2px solid #5ac9c2;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+form input:focus {
+    outline: none;
+    border-bottom: 2px solid #ffffff;
+    box-shadow: 0px 0px 10px rgba(90, 201, 194, 0.5);
+}
+/* Estilo para alinear los botones de editar y eliminar horizontalmente */
+td div {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; /* Alineación centrada */
+}
